@@ -36,6 +36,8 @@
   font-size: .18rem;
   font-weight: normal;
   text-align: center;
+  letter-spacing: 4px;
+  text-shadow: -1px 0 #ffffff, 0 -1px #ffffff, 1px 0 #333333, 0 1px #333333;
 }
 .header hgroup h2 {
   font-size: .16rem;
@@ -53,7 +55,8 @@
   display: -webkit-flex;
   flex-direction: row;
   justify-content: space-around;
-  background-color: #F9E045;
+  background-color: #FFF;
+  opacity: 0.8;
   cursor: pointer;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
@@ -67,6 +70,28 @@
 .introItem a {
   color: #000;
   display: inline-block;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+.introItem a:hover {
+  color: red;
+}
+.responsive-nav {
+  width: 26px;
+  height: 26px;
+}
+.responsive-nav span {
+  height: 3px;
+  display: none;
+  background-color: #4caf50;
+  margin: 4px 3px 0;
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transition: all .6s;
+  transition: all .6s;
 }
 /* header END */
 /* 主体部分 START */
@@ -86,6 +111,11 @@
   margin-bottom: .2rem;
   background-color: #FFF;
   box-shadow: 1px 4px 4px 0 rgba(0, 0, 0, 0.06);
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
 }
 .container figure h4 {
   color: #404040;
@@ -149,3 +179,167 @@ footer {
   align-self: center;
 }
 /* 页面底部 END */
+/* 基本信息 START */
+.resume {
+  border: 1px solid #cccccc;
+  background-color: #FFF;
+  vertical-align: middle;
+  box-sizing: border-box;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+}
+.resume dl {
+  padding-bottom: .1rem;
+  margin-bottom: .16rem;
+}
+.resume dt {
+  font-size: .2rem;
+  line-height: .36rem;
+  border-bottom: 1px solid #CCC;
+}
+.resume dd {
+  margin-top: .1rem;
+}
+.resume dd em {
+  color: #FFF;
+  margin-right: .1rem;
+  margin-bottom: .1rem;
+  display: inline-block;
+  width: .8rem;
+  height: .3rem;
+  line-height: .3rem;
+  text-align: center;
+  background-color: #CCC;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+.resume dd em:hover {
+  background-color: #000;
+}
+.resume dd h4 {
+  color: #666;
+  font-size: .18rem;
+  font-weight: normal;
+  line-height: .32rem;
+}
+.resume i {
+  font-size: .2rem;
+  padding-right: .1rem;
+}
+.resume p {
+  padding-left: .3rem;
+}
+.resume a:hover {
+  color: red;
+}
+/* 基本信息 END */
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .container figure {
+    width: 98%;
+    height: 100%;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  .main_wrap {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .header {
+    width: 100%;
+    height: .5rem;
+    line-height: .5rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .header img {
+    width: .4rem;
+    height: .4rem;
+    margin: 0;
+  }
+  .header hgroup h1 {
+    font-size: .18rem;
+  }
+  .header hgroup h2 {
+    display: none;
+  }
+  .introItem {
+    display: none;
+  }
+  /* header END */
+  .container {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .container figure {
+    width: 98%;
+    height: 100%;
+  }
+  .responsive-nav,
+  .responsive-nav span {
+    display: block;
+  }
+}
+@media (max-width: 480px) {
+  .main_wrap {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .header {
+    width: 100%;
+    height: .5rem;
+    line-height: .5rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .header img {
+    width: .4rem;
+    height: .4rem;
+    margin: 0;
+  }
+  .header hgroup h1 {
+    font-size: .18rem;
+  }
+  .header hgroup h2 {
+    display: none;
+  }
+  .introItem {
+    display: none;
+  }
+  /* header END */
+  .container {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .container figure {
+    width: 98%;
+    height: 100%;
+  }
+  .itemAddr a {
+    margin-right: .1rem;
+  }
+  .responsive-nav,
+  .responsive-nav span {
+    display: block;
+  }
+}
