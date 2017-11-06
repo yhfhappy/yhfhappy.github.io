@@ -15,7 +15,7 @@ Vue.use(VueRouter);
 const router = new VueRouter({
     /*去掉栏目名称前面的#号*/
     // mode:'history',
-    mode:'hash',
+    // mode:'hash',
 
     routes:routerConfig
 });
